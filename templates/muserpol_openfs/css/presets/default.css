@@ -1,0 +1,40 @@
+/**
+ * @package Helix Ultimate Framework
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2018 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or Later
+ */
+a {
+  color: #0bce88;
+}
+a:hover, a:focus, a:active {
+  color: #0bce88;
+}
+.tags > li {
+  display: inline-block;
+}
+.pager > li a {
+  border: 1px solid #ededed;
+}
+.sp-megamenu-parent > li > a {
+  color: #fff;
+}
+.sp-megamenu-parent > li:hover > a {
+  color: #00a88c;
+}
+.sp-megamenu-parent > li.active > a, .sp-megamenu-parent > li.active:hover > a {
+  font-weight: 500;
+  color: #00a88c;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a {
+  transition: 0.1s;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a:hover {
+  color: #fff;
+  background: #393939;
+  transition: 0.1s;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a {
+  color: #fff;
+  background: #2d2d2d;
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="basic" label="Opciones Basicas" addfieldpath="/plugins/system/helixultimate/fields" icon="fa fa-cog">
+      <field name="logo_type" helixgroup="logo" type="list" default="image" label="Logo">
+        <option value="image">Imagen</option>
+		</field>
+		<field name="logo_image" helixgroup="logo" type="helixmedia" preview="true" label="Logo" showon="logo_type:image" />
+		<field name="mobile_logo" helixgroup="logo" type="helixmedia" preview="true" label="Logo Movil" showon="logo_type:image" />
+		<field name="logo_height" helixgroup="logo" type="number" default="36" label="Alto de Logo" showon="logo_type:image" />
+	
+
+		<field name="logo_slogan" helixgroup="logo" type="text" label="Helix Slogan" showon="logo_type:text" />
+
+
+
+		<field name="sticky_header" helixgroup="header" type="checkbox" default="1" label="Header Fixed" />
+		<field name="favicon" helixgroup="header" type="helixmedia" preview="true" label="Favicon" />
+		<field name="boxed_layout" helixgroup="body" type="checkbox" default="0" label="Pagina tipo Blog" />
+
+		<field name="body_bg_image" helixgroup="body" type="helixmedia" preview="true" label="Fondo" showon="boxed_layout:1" />
+		<field name="body_bg_repeat" helixgroup="body" type="list" default="inherit" label="Repetir Fondo" showon="boxed_layout:1">
+			<option value="no-repeat">No Repetir</option>
+			<option value="repeat">Repetir</option>
+		</field>
+		<field name="goto_top" helixgroup="footer" type="checkbox" default="0" label="Go top" />
+		<!--Error Page-->
+		<field name="error_logo" helixgroup="errorpage" type="helixmedia" preview="true" label="Logo" />
+		<field name="error_bg" helixgroup="errorpage" type="helixmedia" preview="true" label="Fondo 404" />
+      <!--Coming soon-->
+		<field name="comingsoon" helixgroup="comingsoon" type="checkbox" default="0" label="Pagina En Mantenimiento" />
+		<field name="comingsoon_title" helixgroup="comingsoon" type="text" default="Coming Soon Title" label="Titulo" showon="comingsoon:1" />
+		<field name="comingsoon_content" helixgroup="comingsoon" type="textarea" rows="6" cols="30" default="Coming soon content" label="Contenido" filter="safehtml" showon="comingsoon:1" />
+		<field name="comingsoon_bg_image" helixgroup="comingsoon" type="helixmedia" preview="true" label="Background" showon="comingsoon:1" />
+      <field name="comingsoon_logo" helixgroup="comingsoon" type="helixmedia" preview="true" label="Logo" showon="comingsoon:1" />
+
+	</fieldset>
+
+	<fieldset name="layout" label="Posiciones Basicas" addfieldpath="/plugins/system/helixultimate/fields" icon="fa fa-list-alt">
+		<field type="helixlayout" name="layout" />
+	</fieldset>
+
+	<fieldset name="menu" label="Navegacion" icon="fa fa-list">
+		<field name="menu" type="menu" helixgroup="megamenu" default="mainmenu" label="Seleccionar Menu" />
+		<field name="menu_type" helixgroup="megamenu" type="list" default="mega_offcanvas" label="Seleccionar">
+			<option value="mega_offcanvas">Menu y Menu Movil</option>
+			<option value="mega">Menu</option>
+			<option value="offcanvas">Menu Movil</option>
+		</field>
+		
+		<field name="menu_animation" helixgroup="megamenu" type="list" default="menu-fade" label="Animacion Submenu" showon="menu_type!:offcanvas">
+			<option value="menu-animation-none">Sin Animacion</option>
+			<option value="menu-animation-fade">Fade In</option>
+			<option value="menu-animation-fade-up">Fade In Up</option>
+			<option value="menu-animation-fade-down">Fade In Down</option>
+			<option value="menu-animation-zoom">Zoom</option>
+			<option value="menu-animation-rotate">Zoom</option>
+			<option value="menu-animation-pulse">Pulse</option>
+		</field>
+      <field name="dropdown_width" helixgroup="megamenu" type="number" label="HELIX_ULTIMATE_MEGAMENU_DROPDOWN_WIDTH" hint="240" showon="menu_type!:offcanvas" />
+
+	</fieldset>
+
+	<!--Typography-->
+	<fieldset name="typography" label="Tipografia" icon="fa fa-font" addfieldpath="/plugins/system/helixultimate/fields">
+		<field name="enable_body_font" type="checkbox" helixgroup="body_font" default="1" label="Habilitar Tipografia" />
+		<field name="body_font" type="helixfont" helixgroup="body_font" default='{"fontFamily":"Open Sans","fontWeight":"300","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_body_font:1" />
+
+		<field name="enable_h1_font" type="checkbox" helixgroup="heading_font" default="1" label="H1" />
+		<field name="h1_font" type="helixfont" helixgroup="heading_font" default='{"fontFamily":"Open Sans","fontWeight":"800","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_h1_font:1" />
+
+		<field name="enable_h2_font" type="checkbox" helixgroup="heading_font" default="1" label="H2" />
+		<field name="h2_font" type="helixfont" helixgroup="heading_font" default='{"fontFamily":"Open Sans","fontWeight":"600","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_h2_font:1" />
+
+		<field name="enable_h3_font" type="checkbox" helixgroup="heading_font" default="1" label="H3" />
+		<field name="h3_font" type="helixfont" helixgroup="heading_font" default='{"fontFamily":"Open Sans","fontWeight":"regular","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_h3_font:1" />
+
+		<field name="enable_h4_font" type="checkbox" helixgroup="heading_font" default="1" label="H4" />
+		<field name="h4_font" type="helixfont" helixgroup="heading_font" default='{"fontFamily":"Open Sans","fontWeight":"regular","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_h4_font:1" />
+
+		<field name="enable_h5_font" type="checkbox" helixgroup="heading_font" default="1" label="H5" />
+		<field name="h5_font" type="helixfont" helixgroup="heading_font" default='{"fontFamily":"Open Sans","fontWeight":"600","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_h5_font:1" />
+
+		<field name="enable_h6_font" type="checkbox" helixgroup="heading_font" default="1" label="H6" />
+		<field name="h6_font" type="helixfont" helixgroup="heading_font" default='{"fontFamily":"Open Sans","fontWeight":"600","fontSubset":"latin","fontSize":""}' hideLabel="true" showon="enable_h6_font:1" />
+
+		<field name="enable_navigation_font" helixgroup="nav_font" type="checkbox" default="0" label="Tipografia de Navegacion" />
+		<field name="navigation_font" type="helixfont" helixgroup="nav_font" hideLabel="true" showon="enable_navigation_font:1" />
+
+		<field name="enable_custom_font" type="checkbox" helixgroup="custom_font" default="0" label="Tipografia Personalizada" />
+		<field name="custom_font" type="helixfont" helixgroup="custom_font" hideLabel="true" showon="enable_custom_font:1" />
+		<field name="custom_font_selectors" type="textarea" helixgroup="custom_font" label="Seleccionar Tipografia" showon="enable_custom_font:1" />
+
+		<field name="update_fonts" type="helixbutton" helixgroup="update_font" url="#" text="Desacargar Tipografia" hideLabel="true" class="btn-primary btn-update-helix-ultimate-fonts" />
+	</fieldset>
+
+	<!--Custom Code-->
+	<fieldset name="custom_code" label="Codigo Personalizado" icon="fa fa-code">
+		<field name="before_head" type="textarea" helixgroup="custom_code" rows="5" label="Cabecera"  filter="raw" />
+		<field name="before_body" type="textarea" helixgroup="custom_code" rows="5" label="Cuerpo"  filter="raw" />
+		<field name="custom_css" type="textarea" helixgroup="custom_code" rows="5" label="Css"  filter="raw" />
+		<field name="custom_js" type="textarea" helixgroup="custom_code" rows="5" label="Js"  filter="raw" />
+	</fieldset>
+
+	<!--Advanced-->
+	<fieldset name="advance" label="Opciones Avanzadas" icon="fa fa-cog">
+		<field name="compress_css" helixgroup="compression" type="checkbox" default="0" label="Comprimir Css"  />
+		<field name="compress_js" helixgroup="compression" type="checkbox" default="0" label="Comprimir Js"  />
+		<field name="exclude_js" helixgroup="compression" type="textarea" label="Excluir Js"  showon="compress_js:1" />
+		<field name="scssoption" helixgroup="scss" type="checkbox" default="0" label="Compilar SASS" />
+		<field name="export_options" helixgroup="importexport" type="helixexportimport" hideLabel="true" />
+	</fieldset>
+
+</form>
